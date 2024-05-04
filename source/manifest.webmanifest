@@ -1,0 +1,31 @@
+{
+    "name": "Drink2Go",
+    "short_name": "Drink2Go",
+    "description": "Интернет-магазин кофейных напитков",
+    "start_url": "/index.html",
+    "icons": [
+        {
+            "src": "favicons/180.png",
+            "type": "image/png",
+            "sizes": "180x180"
+        },
+        {
+            "src": "favicons/192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "favicons/512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "favicons/icon.svg",
+            "type": "image/svg+xml",
+            "sizes": "32x36"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
