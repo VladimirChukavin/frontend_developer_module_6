@@ -1,0 +1,107 @@
+.catalog {
+  padding-top: 18px;
+
+  &__badge {
+    display: block;
+    text-align: center;
+  }
+
+  &__heading {
+    margin: 5px 0 20px;
+    text-align: center;
+  }
+}
+
+.filter {
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__price,
+  &__milk,
+  &__country {
+    margin: 0 0 31px;
+    padding: 0;
+    border: none;
+  }
+
+  &__form legend {
+    margin-bottom: 20px;
+    padding-left: 3px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  &__price-range {
+    position: relative;
+    padding: 10px 0;
+    margin-bottom: 24px;
+  }
+
+  &__scale {
+    height: 2px;
+    background-color: $light-grey;
+  }
+
+  &__bar {
+    width: 241px;
+    height: 4px;
+    margin-top: -3px;
+    margin-left: 3px;
+    background-color: $primary-lighter;
+  }
+
+  &__control {
+    position: absolute;
+    top: -1px;
+    width: 24px;
+    height: 24px;
+    background-color: $base-white;
+    border-radius: 50%;
+    border: 2px solid $primary-lighter;
+    cursor: pointer;
+  }
+
+  &__control--min {
+    left: 3px;
+  }
+
+  &__control--max {
+    left: 239px;
+  }
+
+  &__price-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__input {
+    width: 118px;
+    height: 40px;
+    padding: 8px 10px 8px 25px;
+    border: 2px solid $primary-lighter;
+    border-radius: 4px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: $base-grey;
+
+    &--min {
+      margin-left: 3px;
+    }
+
+    &--max {
+      margin-right: -3px;
+      color: $base-black;
+    }
+  }
+
+  &__separator {
+    width: 8px;
+    height: 2px;
+    margin-top: 2px;
+    background-color: $base-grey;
+  }
+}
