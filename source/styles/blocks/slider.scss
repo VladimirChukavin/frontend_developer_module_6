@@ -1,0 +1,143 @@
+.slider {
+  position: relative;
+
+  &__item {
+    padding-top: 20px;
+    padding-bottom: 51px;
+    text-align: center;
+
+    &--flat {
+      background-color: $flat-white;
+    }
+
+    &--lavender {
+      display: none;
+      background-color: $lavender-latte;
+    }
+
+    &--espresso {
+      display: none;
+      background-color: $espresso;
+    }
+  }
+
+  &__image {
+    margin-bottom: -2px;
+  }
+
+  &__info {
+    height: 300px;
+  }
+
+  &__heading {
+    margin: 1px 0 10px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.02em;
+  }
+
+  &__description {
+    margin: 0 0 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+  }
+
+  &__old-price {
+    margin-top: 2px;
+    margin-right: 9px;
+    line-height: 32px;
+    color: $base-primary;
+  }
+
+  &__price {
+    margin-right: 21px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    color: $base-black;
+  }
+
+  &__button {
+    display: inline-block;
+    width: 113px;
+    height: 40px;
+    padding: 9px 20px 8px;
+    line-height: 24px;
+
+    &:hover {
+      background-color: $primary-lighter;
+    }
+
+    &:focus {
+      background-color: $primary-lighter;
+      outline: none;
+    }
+
+    &:active {
+      background-color: $primary-darker;
+    }
+
+    &:disabled {
+      background-color: $base-grey;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 656px;
+    padding: 0;
+    color: $base-primary;
+
+    &--prev {
+      margin: 1px 1px 1px -1px;
+
+      &:hover {
+        background: linear-gradient(90deg, $base-white 0%, rgba(255 255 255 / 0) 100%);
+      }
+
+      &:focus {
+        background: linear-gradient(90deg, $base-white 0%, rgba(255 255 255 / 0) 100%);
+        outline: none;
+      }
+
+      &:active {
+        background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+      }
+    }
+
+    &--next {
+      right: 0;
+      margin-top: 1px;
+
+      &:hover {
+        background: linear-gradient(270deg, $base-white 0%, rgba(255 255 255 / 0) 100%);
+      }
+
+      &:focus {
+        background: linear-gradient(270deg, $base-white 0%, rgba(255 255 255 / 0) 100%);
+        outline: none;
+      }
+
+      &:active {
+        background: linear-gradient(270deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+      }
+    }
+
+    &:disabled {
+      color: $base-grey;
+    }
+  }
+
+  &__toggles {
+    display: none;
+  }
+}
