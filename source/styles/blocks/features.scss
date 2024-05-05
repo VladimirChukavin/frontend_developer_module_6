@@ -1,0 +1,57 @@
+.features {
+  padding-top: 45px;
+  padding-bottom: 60px;
+  text-align: center;
+
+  &__heading {
+    margin: 2px 0 0;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 35px 0 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    height: 138px;
+    margin-bottom: 36px;
+    background-position: center 0;
+    background-repeat: no-repeat;
+
+    &--speed {
+      background-image: url("../../icons/icon-speed.svg");
+      background-size: 50px 56px;
+    }
+
+    &--comfort {
+      background-image: url("../../icons/icon-comfort.svg");
+      background-size: 52px 56px;
+    }
+
+    &--energy {
+      background-image: url("../../icons/icon-energy.svg");
+      background-size: 42px 56px;
+    }
+
+    &--eco {
+      background-image: url("../../icons/icon-eco.svg");
+      background-size: 46px 56px;
+    }
+
+    h3 {
+      margin: auto 0 0;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 32px;
+    }
+
+    p {
+      margin: 4px 0 -4px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
