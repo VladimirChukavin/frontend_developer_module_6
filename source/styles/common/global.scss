@@ -17,12 +17,12 @@ body {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
   line-height: 24px;
-  background: $base-white;
+  background-color: $base-white;
   color: $base-black;
 }
 
@@ -60,18 +60,41 @@ input[type="radio"].visually-hidden {
 }
 
 .container {
-  max-width: 640px;
+  max-width: 280px;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    max-width: 940px;
+    max-width: 728px;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 1200px;
+    max-width: 1400px;
   }
 }
 
 .main-container {
   flex-grow: 1;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: $base-primary;
+  color: $base-white;
+}
+
+.badge {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $base-primary;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
 }
