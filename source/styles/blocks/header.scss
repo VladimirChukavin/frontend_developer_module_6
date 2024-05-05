@@ -1,5 +1,54 @@
 .header {
-  background-color: #ffffff;
-  color: #333333;
-  padding: 10px 15px;
+  &__logo {
+    display: block;
+    width: 33px;
+    height: 36px;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__description {
+    display: none;
+  }
+
+  &__wrapper {
+    display: flex;
+
+    & span {
+      display: none;
+    }
+  }
+
+  &__login,
+  &__cart,
+  &__menu-button {
+    padding: 21px 22px 15px;
+
+    &:hover {
+      color: $base-primary;
+    }
+
+    &:focus {
+      color: $base-primary;
+      outline: none;
+    }
+
+    &:active {
+      background-color: $base-secondary;
+    }
+  }
+
+  &__menu-button {
+    display: block;
+    padding-top: 18px;
+    margin-right: -20px;
+  }
+}
+
+.toggle {
+  display: none;
 }
