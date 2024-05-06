@@ -82,6 +82,33 @@ input[type="radio"].visually-hidden {
   border-radius: 4px;
   background-color: $base-primary;
   color: $base-white;
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+  }
+}
+
+.disabled {
+  background-color: $base-grey;
+  pointer-events: none;
+
+  &:focus {
+    background-color: $base-grey;
+    pointer-events: none;
+  }
 }
 
 .badge {
@@ -96,5 +123,10 @@ input[type="radio"].visually-hidden {
 .heading {
   font-weight: 700;
   font-size: 24px;
-  line-height: 150%;
+  line-height: 36px;
+}
+
+.active {
+  background: $base-primary;
+  color: $base-white;
 }
