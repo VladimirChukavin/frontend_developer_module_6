@@ -1,5 +1,7 @@
 .catalog {
   padding-top: 18px;
+  padding-bottom: 40px;
+  background-color: $lightest-grey;
 
   &__badge {
     display: block;
@@ -9,6 +11,11 @@
   &__heading {
     margin: 5px 0 20px;
     text-align: center;
+  }
+
+  &__sort span {
+    font-weight: 600;
+    line-height: 24px;
   }
 }
 
@@ -41,6 +48,7 @@
 
   &__scale {
     height: 2px;
+    margin-left: 3px;
     background-color: $light-grey;
   }
 
@@ -50,6 +58,10 @@
     margin-top: -3px;
     margin-left: 3px;
     background-color: $primary-lighter;
+
+    &--disabled {
+      background-color: $base-grey;
+    }
   }
 
   &__control {
@@ -61,6 +73,38 @@
     border-radius: 50%;
     border: 2px solid $primary-lighter;
     cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $base-white;
+    }
+
+    &:hover::before {
+      background-color: $primary-opacity;
+    }
+
+    &:focus::before {
+      background-color: $primary-opacity;
+    }
+
+    &:active::before {
+      background-color: $base-primary;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &--disabled {
+      border-color: $base-grey;
+      cursor: auto;
+    }
   }
 
   &__control--min {
@@ -86,7 +130,6 @@
     font-weight: 500;
     line-height: 24px;
     text-align: center;
-    color: $base-grey;
 
     &--min {
       margin-left: 3px;
@@ -96,6 +139,19 @@
       margin-right: -3px;
       color: $base-black;
     }
+
+    &::placeholder {
+      color: $base-grey;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $primary-darker;
+    }
+
+    &:disabled {
+      border-color: $light-grey;
+    }
   }
 
   &__separator {
@@ -103,5 +159,483 @@
     height: 2px;
     margin-top: 2px;
     background-color: $base-grey;
+  }
+
+  &__milk {
+    margin-bottom: 14px;
+  }
+
+  &__country {
+    margin-bottom: 9px;
+  }
+
+  &__milk-list,
+  &__country-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__buttons {
+    margin-bottom: 37px;
+    margin-left: 3px;
+  }
+
+  &__button {
+    display: block;
+    width: 280px;
+    height: 40px;
+    padding: 9px 20px 8px;
+    line-height: 24px;
+    text-align: center;
+
+    &--submit {
+      margin-bottom: 20px;
+    }
+
+    &--reset {
+      background-color: $base-white;
+      color: $base-primary;
+
+      &:hover {
+        color: $base-white;
+      }
+
+      &:focus {
+        color: $base-white;
+      }
+
+      &:disabled {
+        background-color: $light-grey;
+        color: $base-white;
+      }
+    }
+  }
+}
+
+.milk-list__item label,
+.country-list__item label {
+  position: relative;
+  display: block;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.milk-list__item label::before,
+.country-list__item label::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  height: 24px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.milk-list__item label::after,
+.country-list__item label::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.milk-list {
+  &__item {
+    padding-left: 37px;
+    margin-bottom: 20px;
+  }
+
+  &__item label::before {
+    left: -34px;
+    width: 24px;
+    border: 2px solid $base-grey;
+    border-radius: 50%;
+  }
+
+  &__item label::after {
+    top: 3px;
+    left: -30px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $base-white;
+  }
+
+  &__item input:not(:disabled, :checked) + label:hover::before,
+  &__item input:not(:disabled, :checked):focus + label::before {
+    border-color: $primary-lighter;
+  }
+
+  &__item input:not(:disabled, :checked) + label:hover::after,
+  &__item input:not(:disabled, :checked):focus + label::after {
+    background-color: $primary-opacity;
+  }
+
+  &__item input:checked + label::before {
+    border-color: $base-primary;
+  }
+
+  &__item input:checked + label::after {
+    background-color: $base-primary;
+  }
+
+  &__item input:disabled + label {
+    color: $base-grey;
+    cursor: auto;
+  }
+
+  &__item input:disabled + label::before {
+    border-color: $light-grey;
+    cursor: auto;
+  }
+
+  &__item input:checked:disabled + label::after {
+    background-color: $light-grey;
+  }
+}
+
+.country-list {
+  &__item {
+    padding-left: 55px;
+    margin-bottom: 20px;
+  }
+
+  &__item label::before {
+    left: -52px;
+    width: 42px;
+    border-radius: 12px;
+    background: $base-grey;
+  }
+
+  &__item label::after {
+    top: 1px;
+    left: -50px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $base-white;
+  }
+
+  &__item input:not(:disabled, :checked) + label:hover::before,
+  &__item input:not(:disabled, :checked):focus + label::before {
+    border: 2px solid $primary-lighter;
+    background: $primary-opacity;
+  }
+
+  &__item input:checked + label::before {
+    background-color: $base-primary;
+  }
+
+  &__item input:checked + label::after {
+    left: -32px;
+  }
+
+  &__item input:disabled + label {
+    color: $base-grey;
+    cursor: auto;
+  }
+
+  &__item input:disabled + label::before {
+    background-color: $light-grey;
+    cursor: auto;
+  }
+
+  &__item input:disabled + label::after {
+    background-color: $lightest-grey;
+  }
+
+  &__item input:checked:disabled + label::after {
+    background-color: $base-grey;
+  }
+}
+
+.sort {
+  position: relative;
+  margin-left: 3px;
+  margin-right: -4px;
+
+  &__select {
+    display: inline-block;
+    padding: 4px 10px;
+    margin-left: 5px;
+    border-radius: 4px;
+    color: $base-primary;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-left: 10px;
+      background: url("../../icons/icon-down.svg") no-repeat;
+    }
+
+    &:hover {
+      background-color: $base-secondary;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: $base-secondary;
+    }
+  }
+
+  &__list {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 42px;
+    width: 190px;
+    padding: 0;
+    margin: 0 0 0 auto;
+    list-style: none;
+    box-shadow: 0 5px 15px 0 rgba(0 0 0 / 20%);
+    border-radius: 4px;
+    background-color: $base-white;
+  }
+
+  &__item {
+    border-bottom: 1px solid $base-secondary;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__item a {
+    display: block;
+    padding: 8px 20px;
+
+    &:hover {
+      background-color: $base-secondary;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: $base-secondary;
+    }
+
+    &:active {
+      background: $base-primary;
+      color: $base-white;
+    }
+  }
+
+  &__item:first-child a {
+    border-radius: 4px 4px 0 0;
+  }
+
+  &__item:last-child a {
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+.active-sort {
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
+.products {
+  padding-top: 25px;
+  margin-bottom: 46px;
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    padding: 0 15px 15px;
+    margin-bottom: 35px;
+    border-radius: 4px;
+
+    &:hover {
+      box-shadow: 0 5px 15px 0 rgba(0 0 0 / 15%);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 5px 15px 0 rgba(0 0 0 / 15%);
+    }
+  }
+}
+
+.product {
+  &__link {
+    display: block;
+    margin-right: -15px;
+    margin-left: -15px;
+
+    &:first-child {
+      padding-top: 30px;
+      padding-bottom: 24px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    margin: 0 0 4px;
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  &__info {
+    margin: 0 0 16px;
+    padding-left: 5px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3px;
+    padding-right: 5px;
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  &__button {
+    position: relative;
+    padding: 8px 20px 8px 46px;
+    font-size: 14px;
+    line-height: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      width: 20px;
+      height: 16px;
+      background-image: url("../../icons/icon-cart-plus.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &__item:first-child {
+    margin-right: auto;
+  }
+
+  &__item:last-child {
+    margin-left: auto;
+  }
+
+  &__item:last-child &__link {
+    padding-right: 14px;
+    padding-left: 18px;
+  }
+
+  &__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 8px 16px;
+    margin-top: -2px;
+    color: $base-primary;
+    border-radius: 4px;
+
+    &:hover,
+    &:focus {
+      background-color: $primary-lighter;
+      color: $base-white;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      background-color: $primary-darker;
+    }
+  }
+
+  &__link span {
+    display: none;
+  }
+}
+
+.numbers-page {
+  display: flex;
+  justify-content: space-between;
+  width: 159px;
+  padding: 0;
+  margin: 0 4px 0 3px;
+  list-style: none;
+
+  &__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 8px 16px;
+    line-height: 150%;
+    color: $base-primary;
+    text-align: center;
+    border-radius: 4px;
+
+    &:hover,
+    &:focus {
+      background-color: $primary-lighter;
+      color: $base-white;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      background-color: $primary-darker;
+    }
+
+    &--current {
+      font-weight: 600;
+      color: $base-black;
+      cursor: auto;
+
+      &:hover {
+        background-color: $base-white;
+        color: $base-black;
+      }
+
+      &:focus {
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.disabled-pagination {
+  pointer-events: none;
+  background-color: $light-grey;
+  color: $base-white;
+
+  &:focus {
+    background-color: $light-grey;
+    pointer-events: none;
   }
 }
