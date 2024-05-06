@@ -225,10 +225,10 @@
                 </div>
                 <div class="filter__price-input">
                   <label class="visually-hidden" for="price-lower">Минимальная цена</label>
-                  <input class="filter__input filter__input--min" type="number" id="price-lower" name="price_lower" value="0">
+                  <input class="filter__input filter__input--min" type="number" id="price-lower" name="price_lower" min="0" placeholder="0">
                   <span class="filter__separator"></span>
                   <label class="visually-hidden" for="price-upper">Максимальная цена</label>
-                  <input class="filter__input filter__input--max" type="number" id="price-upper" name="price_upper" value="123">
+                  <input class="filter__input filter__input--max" type="number" id="price-upper" name="price_upper" min="0" value="123" placeholder="0">
                 </div>
               </fieldset>
               <fieldset class="filter__milk">
@@ -278,110 +278,123 @@
                 </ul>
               </fieldset>
               <div class="filter__buttons">
-                <button class="filter__button filter__button--submit" type="submit">Применить</button>
-                <button class="filter__button filter__button--reset" type="reset">Сбросить</button>
+                <button class="filter__button filter__button--submit button" type="submit">Применить</button>
+                <button class="filter__button filter__button--reset button" type="reset">Сбросить</button>
               </div>
             </form>
           </div>
-          <div class="catalog__sort">
+          <div class="catalog__sort sort">
             <span>Сортировка:</span>
-            <ul class="catalog__sort-list sort-list">
-              <li class="sort-list__item active">
+            <span class="sort__select" tabindex="0">по умолчанию</span>
+            <ul class="sort__list">
+              <li class="sort__item active">
                 <a href="#">по умолчанию</a>
               </li>
-              <li class="sort-list__item active">
+              <li class="sort__item">
                 <a href="#">сначала дорогие</a>
               </li>
-              <li class="sort-list__item active">
+              <li class="sort__item">
                 <a href="#">сначала дешёвые</a>
               </li>
-              <li class="sort-list__item active">
+              <li class="sort__item">
                 <a href="#">высокий рейтинг</a>
               </li>
             </ul>
           </div>
           <div class="catalog__products products">
             <ul class="products__list">
-              <li class="products__item product">
-                <a class="catalog__link" href="#">
+              <li class="products__item product" tabindex="0">
+                <a class="product__link" href="#">
                   <picture>
                     <source type="image/webp" srcset="images/coffee-can-1@1x.webp 1x, images/coffee-can-1@2x.webp 2x">
-                    <img class="catalog__image" src="images/coffee-can-1@1x.png" srcset="images/coffee-can-1@2x.png 2x" loading="lazy" alt="Декаф Флэт Уайт">
+                    <img class="product__image" src="images/coffee-can-1@1x.png" srcset="images/coffee-can-1@2x.png 2x" loading="lazy" alt="Декаф Флэт Уайт">
                   </picture>
                 </a>
-                <h3 class="product__heading">Декаф Флэт Уайт</h3>
-                <p class="product__info">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                <div class="product__wrapper">
+                <a class="product__link" href="#">
+                  <h3 class="product__heading">Декаф Флэт Уайт</h3>
+                </a>
+                <p class="product__info">Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком</p>
+                <div class="product__buy">
                   <span class="product__price">225₽</span>
                   <a class="product__button button" href="#">В корзину</a>
                 </div>
               </li>
-              <li class="products__item product">
-                <a class="catalog__link" href="#">
+              <li class="products__item product" tabindex="0">
+                <a class="product__link" href="#">
                   <picture>
                     <source type="image/webp" srcset="images/coffee-can-2@1x.webp 1x, images/coffee-can-2@2x.webp 2x">
-                    <img class="catalog__image" src="images/coffee-can-2@1x.png" srcset="images/coffee-can-2@2x.png 2x" loading="lazy" alt="Декаф Флэт Уайт">
+                    <img class="product__image" src="images/coffee-can-2@1x.png" srcset="images/coffee-can-2@2x.png 2x" loading="lazy" alt="Декаф Флэт Уайт">
                   </picture>
                 </a>
-                <h3 class="product__heading">Декаф Флэт Уайт</h3>
-                <p class="product__info">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                <div class="product__wrapper">
+                <a class="product__link" href="#">
+                  <h3 class="product__heading">Декаф Флэт Уайт</h3>
+                </a>
+                <p class="product__info">Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком</p>
+                <div class="product__buy">
                   <span class="product__price">225₽</span>
                   <a class="product__button button" href="#">В корзину</a>
                 </div>
               </li>
-              <li class="products__item product">
-                <a class="catalog__link" href="#">
+              <li class="products__item product" tabindex="0">
+                <a class="product__link" href="#">
                   <picture>
                     <source type="image/webp" srcset="images/coffee-can-3@1x.webp 1x, images/coffee-can-3@2x.webp 2x">
-                    <img class="catalog__image" src="images/coffee-can-3@1x.png" srcset="images/coffee-can-3@2x.png 2x" loading="lazy" alt="Декаф Флэт Уайт">
+                    <img class="product__image" src="images/coffee-can-3@1x.png" srcset="images/coffee-can-3@2x.png 2x" loading="lazy" alt="Декаф Флэт Уайт">
                   </picture>
                 </a>
-                <h3 class="product__heading">Декаф Флэт Уайт</h3>
-                <p class="product__info">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                <div class="product__wrapper">
+                <a class="product__link" href="#">
+                  <h3 class="product__heading">Декаф Флэт Уайт</h3>
+                </a>
+                <p class="product__info">Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком</p>
+                <div class="product__buy">
                   <span class="product__price">225₽</span>
                   <a class="product__button button" href="#">В корзину</a>
                 </div>
               </li>
-              <li class="products__item product">
-                <a class="catalog__link" href="#">
+              <li class="products__item product" tabindex="0">
+                <a class="product__link" href="#">
                   <picture>
                     <source type="image/webp" srcset="images/coffee-can-4@1x.webp 1x, images/coffee-can-4@2x.webp 2x">
-                    <img class="catalog__image" src="images/coffee-can-4@1x.png" srcset="images/coffee-can-4@2x.png 2x" loading="lazy" alt="Декаф Флэт Уайт">
+                    <img class="product__image" src="images/coffee-can-4@1x.png" srcset="images/coffee-can-4@2x.png 2x" loading="lazy" alt="Декаф Флэт Уайт">
                   </picture>
                 </a>
-                <h3 class="product__heading">Декаф Флэт Уайт</h3>
-                <p class="product__info">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                <div class="product__wrapper">
+                <a class="product__link" href="#">
+                  <h3 class="product__heading">Декаф Флэт Уайт</h3>
+                </a>
+                <p class="product__info">Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком</p>
+                <div class="product__buy">
                   <span class="product__price">225₽</span>
                   <a class="product__button button" href="#">В корзину</a>
                 </div>
               </li>
-              <li class="products__item product">
-                <a class="catalog__link" href="#">
+              <li class="products__item product" tabindex="0">
+                <a class="product__link" href="#">
                   <picture>
                     <source type="image/webp" srcset="images/coffee-can-5@1x.webp 1x, images/coffee-can-5@2x.webp 2x">
-                    <img class="catalog__image" src="images/coffee-can-5@1x.png" srcset="images/coffee-can-5@2x.png 2x" loading="lazy" alt="Декаф Флэт Уайт">
+                    <img class="product__image" src="images/coffee-can-5@1x.png" srcset="images/coffee-can-5@2x.png 2x" loading="lazy" alt="Декаф Флэт Уайт">
                   </picture>
                 </a>
-                <h3 class="product__heading">Декаф Флэт Уайт</h3>
-                <p class="product__info">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                <div class="product__wrapper">
+                <a class="product__link" href="#">
+                  <h3 class="product__heading">Декаф Флэт Уайт</h3>
+                </a>
+                <p class="product__info">Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком</p>
+                <div class="product__buy">
                   <span class="product__price">225₽</span>
                   <a class="product__button button" href="#">В корзину</a>
                 </div>
               </li>
-              <li class="products__item product">
-                <a class="catalog__link" href="#">
+              <li class="products__item product" tabindex="0">
+                <a class="product__link" href="#">
                   <picture>
                     <source type="image/webp" srcset="images/coffee-can-6@1x.webp 1x, images/coffee-can-6@2x.webp 2x">
-                    <img class="catalog__image" src="images/coffee-can-6@1x.png" srcset="images/coffee-can-6@2x.png 2x" loading="lazy" alt="Декаф Флэт Уайт">
+                    <img class="product__image" src="images/coffee-can-6@1x.png" srcset="images/coffee-can-6@2x.png 2x" loading="lazy" alt="Декаф Флэт Уайт">
                   </picture>
                 </a>
-                <h3 class="product__heading">Декаф Флэт Уайт</h3>
-                <p class="product__info">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                <div class="product__wrapper">
+                <a class="product__link" href="#">
+                  <h3 class="product__heading">Декаф Флэт Уайт</h3>
+                </a>
+                <p class="product__info">Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком</p>
+                <div class="product__buy">
                   <span class="product__price">225₽</span>
                   <a class="product__button button" href="#">В корзину</a>
                 </div>
@@ -403,7 +416,7 @@
                   <a class="numbers-page__link" href="#">1</a>
                 </li>
                 <li class="numbers-page__item">
-                  <a class="numbers-page__link numbers-page__link--current" href="#">2</a>
+                  <a class="numbers-page__link numbers-page__link--current">2</a>
                 </li>
                 <li class="numbers-page__item">
                   <a class="numbers-page__link" href="#">3</a>
@@ -432,7 +445,7 @@
           <div class="footer__logo">
             <picture>
               <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
-              <img class="slider__image" src="images/logo-tablet.svg" alt="Логотип интернет-магазина кофейных напитков">
+              <img class="footer__image" src="images/logo-tablet.svg" alt="Логотип интернет-магазина кофейных напитков">
             </picture>
           </div>
           <ul class="footer__social social">
