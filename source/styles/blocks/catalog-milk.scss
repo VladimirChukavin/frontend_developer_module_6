@@ -1,0 +1,83 @@
+.milk-list__item label,
+.country-list__item label {
+  position: relative;
+  display: block;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.milk-list__item label::before,
+.country-list__item label::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  height: 24px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.milk-list__item label::after,
+.country-list__item label::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.milk-list {
+  @media (min-width: $tablet-width) {
+    margin-left: -3px;
+  }
+
+  &__item {
+    padding-left: 37px;
+    margin-bottom: 20px;
+  }
+
+  &__item label::before {
+    left: -34px;
+    width: 24px;
+    border: 2px solid $base-grey;
+    border-radius: 50%;
+  }
+
+  &__item label::after {
+    top: 3px;
+    left: -30px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $base-white;
+  }
+
+  &__item input:not(:disabled, :checked) + label:hover::before,
+  &__item input:not(:disabled, :checked):focus + label::before {
+    border-color: $primary-lighter;
+  }
+
+  &__item input:not(:disabled, :checked) + label:hover::after,
+  &__item input:not(:disabled, :checked):focus + label::after {
+    background-color: $primary-opacity;
+  }
+
+  &__item input:checked + label::before {
+    border-color: $base-primary;
+  }
+
+  &__item input:checked + label::after {
+    background-color: $base-primary;
+  }
+
+  &__item input:disabled + label {
+    color: $base-grey;
+    cursor: auto;
+  }
+
+  &__item input:disabled + label::before {
+    border-color: $light-grey;
+    cursor: auto;
+  }
+
+  &__item input:checked:disabled + label::after {
+    background-color: $light-grey;
+  }
+}
