@@ -1,0 +1,58 @@
+.country-list {
+  @media (min-width: $tablet-width) {
+    margin-left: -3px;
+  }
+
+  &__item {
+    padding-left: 55px;
+    margin-bottom: 20px;
+  }
+
+  &__item label::before {
+    left: -52px;
+    width: 42px;
+    border-radius: 12px;
+    background: $base-grey;
+  }
+
+  &__item label::after {
+    top: 1px;
+    left: -50px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $base-white;
+  }
+
+  &__item input:not(:disabled, :checked) + label:hover::before,
+  &__item input:not(:disabled, :checked):focus + label::before {
+    border: 2px solid $primary-lighter;
+    background: $primary-opacity;
+  }
+
+  &__item input:checked + label::before {
+    background-color: $base-primary;
+  }
+
+  &__item input:checked + label::after {
+    left: -32px;
+  }
+
+  &__item input:disabled + label {
+    color: $base-grey;
+    cursor: auto;
+  }
+
+  &__item input:disabled + label::before {
+    background-color: $light-grey;
+    cursor: auto;
+  }
+
+  &__item input:disabled + label::after {
+    background-color: $lightest-grey;
+  }
+
+  &__item input:checked:disabled + label::after {
+    background-color: $base-grey;
+  }
+}
