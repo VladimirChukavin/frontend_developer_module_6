@@ -1,0 +1,183 @@
+.footer {
+  &__top,
+  &__nav,
+  &__contacts {
+    padding: 20px 20px 25px;
+    border-bottom: 1px solid $base-secondary;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  &__logo {
+    display: block;
+    width: 82px;
+    height: 36px;
+  }
+
+  &__social {
+    padding: 0;
+    margin: 0 0 0 auto;
+    list-style: none;
+  }
+
+  &__heading {
+    margin: 0 0 15px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: $base-primary;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item a {
+    padding: 8px 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      color: $primary-lighter;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      color: $primary-darker;
+    }
+  }
+
+  &__contacts {
+    padding-bottom: 18px;
+  }
+
+  &__contacts h3 {
+    margin-bottom: 20px;
+  }
+
+  &__address,
+  &__phone {
+    position: relative;
+    padding-left: 19px;
+    font-size: 14px;
+    line-height: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 13px;
+      height: 16px;
+    }
+  }
+
+  &__address {
+    margin-bottom: 14px;
+    font-style: normal;
+
+    &::before {
+      background-image: url("../../icons/icon-address.svg");
+    }
+  }
+
+  &__phone {
+    &::before {
+      top: 1px;
+      background-image: url("../../icons/icon-phone.svg");
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__developer {
+    display: flex;
+    width: 207px;
+    margin: 20px auto 30px;
+    font-size: 12px;
+    line-height: 16px;
+    color: $base-grey;
+    text-align: center;
+  }
+
+  &__developer-link {
+    display: flex;
+    margin-left: 4px;
+
+    &:hover,
+    &:focus {
+      color: $base-primary;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      color: $primary-darker;
+    }
+  }
+
+  &__developer-link span {
+    margin-right: 4px;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+
+  &__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 4px;
+    color: $base-grey;
+
+    &--margin {
+      margin-top: -3px;
+      margin-left: -2px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $base-secondary;
+      color: $base-primary;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      background-color: $primary-opacity;
+    }
+  }
+}
