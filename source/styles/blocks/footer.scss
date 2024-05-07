@@ -2,7 +2,7 @@
   &__top,
   &__nav,
   &__contacts {
-    padding: 20px 20px 25px;
+    padding: 20px 0 25px;
     border-bottom: 1px solid $base-secondary;
   }
 
@@ -10,12 +10,20 @@
     display: flex;
     align-items: center;
     padding-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 40px;
+    }
   }
 
   &__logo {
     display: block;
     width: 82px;
     height: 36px;
+
+    @media (min-width: $tablet-width) {
+      width: 170px;
+    }
   }
 
   &__social {
