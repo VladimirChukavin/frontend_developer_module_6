@@ -1,0 +1,102 @@
+.sort {
+  position: relative;
+  margin-left: 3px;
+  margin-right: -4px;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 4px;
+    margin-bottom: 45px;
+    text-align: right;
+  }
+
+  &__select {
+    display: inline-block;
+    padding: 4px 10px;
+    margin-left: 5px;
+    border-radius: 4px;
+    color: $base-primary;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-left: 10px;
+      background: url("../../icons/icon-down.svg") no-repeat;
+    }
+
+    &:hover {
+      background-color: $base-secondary;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: $base-secondary;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-left: 7px;
+    }
+  }
+
+  &__list {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 42px;
+    width: 190px;
+    padding: 0;
+    margin: 0 0 0 auto;
+    list-style: none;
+    box-shadow: 0 5px 15px 0 rgba(0 0 0 / 20%);
+    border-radius: 4px;
+    background-color: $base-white;
+
+    @media (min-width: $tablet-width) {
+      text-align: left;
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid $base-secondary;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:first-child {
+      border-radius: 4px 4px 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 4px 4px;
+    }
+  }
+
+  &__item a {
+    display: block;
+    padding: 8px 20px;
+
+    &:hover {
+      background-color: $base-secondary;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: $base-secondary;
+    }
+
+    &:active {
+      background-color: $base-primary;
+      color: $base-white;
+    }
+  }
+}
+
+.active-sort {
+  &::after {
+    transform: rotate(180deg);
+  }
+}
