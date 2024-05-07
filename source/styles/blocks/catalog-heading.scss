@@ -1,0 +1,29 @@
+.catalog {
+  padding-top: 18px;
+  padding-bottom: 43px;
+  background-color: $lightest-grey;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 89px;
+  }
+
+  &__badge {
+    display: block;
+    text-align: center;
+  }
+
+  &__heading {
+    margin: 5px 0 20px;
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 4px;
+      margin-bottom: 21px;
+    }
+  }
+
+  &__sort span {
+    font-weight: 600;
+    line-height: 24px;
+  }
+}
