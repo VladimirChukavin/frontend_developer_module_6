@@ -3,6 +3,19 @@
     display: block;
     width: 33px;
     height: 36px;
+
+    @media (min-width: $tablet-width) {
+      width: 82px;
+      margin-top: -2px;
+    }
+  }
+
+  &--nojs .nav__menu-button {
+    visibility: hidden;
+  }
+
+  &--nojs .toggle {
+    display: block;
   }
 }
 
@@ -10,9 +23,87 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
   &__description {
     display: none;
+  }
+
+  &__list {
+    width: 100%;
+    order: 1;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      &.toggle {
+        display: flex;
+        order: 0;
+        width: auto;
+        margin-left: 6px;
+      }
+    }
+  }
+
+  &__item {
+    margin-left: -20px;
+    margin-right: -20px;
+    border-bottom: 1px solid $base-secondary;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 20px;
+
+    &:hover,
+    &:focus {
+      color: $base-primary;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      background-color: $base-secondary;
+
+      @media (min-width: $tablet-width) {
+        border-bottom-color: $base-secondary;
+      }
+    }
+
+    &--current:hover,
+    &--current:focus {
+      pointer-events: none;
+      color: $base-black;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 31px 20px 30px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: $base-black;
+      border-bottom: 2px solid $base-white;
+
+      &--current {
+        color: $base-primary;
+        border-bottom-color: $base-primary;
+      }
+    }
   }
 
   &__wrapper {
@@ -40,12 +131,22 @@
     &:active {
       background-color: $base-secondary;
     }
+
+    @media (min-width: $tablet-width) {
+      padding: 31px 22px 25px;
+      margin-top: -2px;
+    }
   }
 
   &__menu-button {
     display: block;
+    width: 60px;
     padding-top: 18px;
     margin-right: -20px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 
