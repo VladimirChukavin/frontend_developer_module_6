@@ -10,6 +10,10 @@
     margin-left: auto;
   }
 
+  @media (min-width: $desktop-width) {
+    margin-right: -1px;
+  }
+
   &__item:first-child {
     margin-right: auto;
 
