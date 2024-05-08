@@ -44,7 +44,7 @@ button {
   cursor: pointer;
 }
 
-.visually-hidden:not(:focus, :active),
+.visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
@@ -134,4 +134,8 @@ input[type="radio"].visually-hidden {
 .active {
   background: $base-primary;
   color: $base-white;
+}
+
+.toggle {
+  display: none;
 }
