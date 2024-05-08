@@ -1,4 +1,8 @@
 .products {
+  @media (min-width: $desktop-width) {
+    max-width: 1011px;
+  }
+
   &__list {
     padding: 0;
     margin: 0;
@@ -9,6 +13,10 @@
       flex-wrap: wrap;
       justify-content: space-between;
       margin-bottom: 21px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 11px;
     }
   }
 
@@ -32,6 +40,12 @@
 
     @media (min-width: $tablet-width) {
       min-width: 349px;
+      margin-bottom: 65px;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: 317px;
+      width: 317px;
       margin-bottom: 65px;
     }
   }
