@@ -83,13 +83,13 @@ input[type="radio"].visually-hidden {
   background-color: $base-primary;
   color: $base-white;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $primary-lighter;
   }
 
   &:focus {
     outline: none;
-    background-color: $primary-lighter;
   }
 
   &:active {
