@@ -1,4 +1,9 @@
 .filter {
+  @media (min-width: $desktop-width) {
+    max-width: 318px;
+    padding-top: 4px;
+  }
+
   &__form {
     display: flex;
     flex-direction: column;
@@ -21,6 +26,10 @@
     @media (min-width: $tablet-width) {
       width: 223px;
     }
+
+    @media (min-width: $desktop-width) {
+      width: 100%;
+    }
   }
 
   &__form legend {
@@ -41,6 +50,10 @@
 
     @media (min-width: $tablet-width) {
       margin-bottom: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 22px;
     }
   }
 
@@ -63,6 +76,10 @@
 
     @media (min-width: $tablet-width) {
       width: 192px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 274px;
     }
   }
 
@@ -123,6 +140,10 @@
     @media (min-width: $tablet-width) {
       left: 179px;
     }
+
+    @media (min-width: $desktop-width) {
+      left: 274px;
+    }
   }
 
   &__price-input {
@@ -163,6 +184,13 @@
       }
     }
 
+    &--min,
+    &--max {
+      @media (min-width: $desktop-width) {
+        width: 134px;
+      }
+    }
+
     &::placeholder {
       color: $base-grey;
     }
@@ -186,14 +214,26 @@
     @media (min-width: $tablet-width) {
       margin-top: 0;
     }
+
+    @media (min-width: $desktop-width) {
+      width: 10px;
+    }
   }
 
   &__milk {
     margin-bottom: 14px;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 10px;
+    }
   }
 
   &__country {
     margin-bottom: 9px;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 19px;
+    }
   }
 
   &__milk-list,
@@ -213,6 +253,11 @@
       width: 277px;
       margin: 10px auto 0;
     }
+
+    @media (min-width: $desktop-width) {
+      width: 100%;
+      margin: 0;
+    }
   }
 
   &__button {
@@ -225,6 +270,10 @@
 
     @media (min-width: $tablet-width) {
       width: 137px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 149px;
     }
 
     &--submit {
@@ -254,6 +303,10 @@
 
       @media (min-width: $tablet-width) {
         width: 120px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 149px;
       }
     }
   }
