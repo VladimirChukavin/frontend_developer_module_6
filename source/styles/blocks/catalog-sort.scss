@@ -62,15 +62,12 @@
   &__item {
     border-bottom: 1px solid $base-secondary;
 
-    &:last-child {
-      border-bottom: none;
-    }
-
     &:first-child {
       border-radius: 4px 4px 0 0;
     }
 
     &:last-child {
+      border-bottom: none;
       border-radius: 0 0 4px 4px;
     }
   }
