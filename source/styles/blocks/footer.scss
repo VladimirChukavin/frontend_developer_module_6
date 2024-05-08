@@ -1,9 +1,31 @@
 .footer {
+  &__container {
+    @media (min-width: $desktop-width) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-top: 49px;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-bottom: 50px;
+    }
+  }
+
   &__top,
   &__nav,
   &__contacts {
     padding: 20px 0 25px;
     border-bottom: 1px solid $base-secondary;
+
+    @media (min-width: $tablet-width) {
+      width: 223px;
+      border-bottom: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 317px;
+      padding: 0;
+    }
   }
 
   &__top {
@@ -12,17 +34,40 @@
     padding-bottom: 20px;
 
     @media (min-width: $tablet-width) {
+      width: auto;
       padding-top: 40px;
+      padding-bottom: 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      flex-direction: column;
+      align-items: start;
+      width: 300px;
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 
-  &__logo {
+  &__image {
     display: block;
     width: 82px;
     height: 36px;
 
     @media (min-width: $tablet-width) {
-      width: 170px;
+      width: 171px;
+      margin-left: -1px;
+      margin-top: -9px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__logo span {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      font-size: 14px;
+      line-height: 20px;
     }
   }
 
@@ -30,6 +75,29 @@
     padding: 0;
     margin: 0 0 0 auto;
     list-style: none;
+
+    @media (min-width: $desktop-width) {
+      margin: 50px 0 0;
+    }
+  }
+
+  &__wrapper {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__nav {
+    @media (min-width: $desktop-width) {
+      margin-right: 31px;
+    }
+  }
+
+  &__nav:first-child {
+    @media (min-width: $desktop-width) {
+      padding-left: 1px;
+    }
   }
 
   &__heading {
@@ -79,6 +147,10 @@
 
   &__contacts {
     padding-bottom: 18px;
+
+    @media (min-width: $desktop-width) {
+      margin-top: 1px;
+    }
   }
 
   &__contacts h3 {
@@ -109,6 +181,12 @@
     &::before {
       background-image: url("../../icons/icon-address.svg");
     }
+
+    @media (min-width: $tablet-width) {
+      & br {
+        display: none;
+      }
+    }
   }
 
   &__phone {
@@ -130,6 +208,14 @@
     line-height: 16px;
     color: $base-grey;
     text-align: center;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 25px;
+    }
   }
 
   &__developer-link {
