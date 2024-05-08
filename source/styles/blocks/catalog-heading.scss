@@ -7,6 +7,11 @@
     padding-bottom: 89px;
   }
 
+  @media (min-width: $desktop-width) {
+    padding-top: 86px;
+    padding-bottom: 119px;
+  }
+
   &__badge {
     display: block;
     text-align: center;
@@ -19,6 +24,19 @@
     @media (min-width: $tablet-width) {
       margin-top: 4px;
       margin-bottom: 21px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 37px;
+    }
+  }
+
+  &__wrapper {
+    @media (min-width: $desktop-width) {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 21px;
     }
   }
 
