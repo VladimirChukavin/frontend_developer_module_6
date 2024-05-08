@@ -77,6 +77,7 @@
   &__item {
     margin-left: -20px;
     margin-right: -20px;
+    border-top: 1px solid $base-secondary;
 
     &:last-child {
       border-bottom: none;
@@ -99,6 +100,11 @@
   &__link {
     display: block;
     padding: 20px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
 
     &:hover,
     &:focus {
@@ -126,25 +132,25 @@
       text-transform: uppercase;
       color: $base-black;
       border-bottom: 2px solid $base-white;
+    }
 
-      &--current {
-        color: $base-primary;
-        border-bottom-color: $base-primary;
+    &--current {
+      color: $base-primary;
+      border-bottom-color: $base-primary;
+    }
 
-        &:hover,
-        &:focus {
-          pointer-events: none;
-          color: $base-primary;
-          background-color: $base-white;
-        }
+    &--current:hover,
+    &--current:focus {
+      pointer-events: none;
+      color: $base-primary;
+      background-color: $base-white;
+    }
 
-        &:active {
-          background-color: $base-white;
-          color: $base-primary;
-          border-bottom-color: $base-primary;
-          pointer-events: none;
-        }
-      }
+    &--current:active {
+      background-color: $base-white;
+      color: $base-primary;
+      border-bottom-color: $base-primary;
+      pointer-events: none;
     }
   }
 
@@ -153,8 +159,10 @@
 
     & span {
       display: none;
+    }
 
-      @media (min-width: $desktop-width) {
+    @media (min-width: $desktop-width) {
+      & span {
         display: inline;
         margin-left: 8px;
         font-weight: 500;
@@ -207,8 +215,4 @@
       display: none;
     }
   }
-}
-
-.toggle {
-  display: none;
 }
