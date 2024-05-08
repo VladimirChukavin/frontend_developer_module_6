@@ -24,7 +24,7 @@
     @media (min-width: $desktop-width) {
       margin-bottom: 80px;
     }
- }
+  }
 
   &__list {
     padding: 0;
@@ -76,8 +76,10 @@
       font-weight: 700;
       font-size: 18px;
       line-height: 32px;
+    }
 
-      @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) {
+      h3 {
         margin: 0 0 6px;
         font-size: 24px;
         line-height: 36px;
@@ -88,16 +90,17 @@
       margin: 4px 0 -4px;
       font-size: 14px;
       line-height: 20px;
+    }
 
-      @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) {
+      p {
         font-size: 16px;
         line-height: 24px;
       }
     }
 
     @media (min-width: $tablet-width) {
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-flow: row wrap;
       width: 339px;
       height: auto;
       padding-left: 82px;
