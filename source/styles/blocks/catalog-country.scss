@@ -24,8 +24,8 @@
     background-color: $base-white;
   }
 
-  &__item input:not(:disabled, :checked) + label:hover::before,
-  &__item input:not(:disabled, :checked):focus + label::before {
+  &__item input:not(:disabled):not(:checked) + label:hover::before,
+  &__item input:not(:disabled):not(:checked):focus + label::before {
     border: 2px solid $primary-lighter;
     background: $primary-opacity;
   }
