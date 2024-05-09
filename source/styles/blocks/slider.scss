@@ -11,12 +11,10 @@
     }
 
     &--lavender {
-      display: none;
       background-color: $lavender-latte;
     }
 
     &--espresso {
-      display: none;
       background-color: $espresso;
     }
   }
@@ -32,12 +30,10 @@
     }
 
     &__item--lavender {
-      display: none;
       background-image: linear-gradient(to bottom, $lavender-latte 640px, $base-white 188px);
     }
 
     &__item--espresso {
-      display: none;
       background-image: linear-gradient(to bottom, $espresso 640px, $base-white 188px);
     }
   }
@@ -54,12 +50,10 @@
     }
 
     &__item--lavender {
-      display: none;
       background: $lavender-latte;
     }
 
     &__item--espresso {
-      display: none;
       background: $espresso;
     }
   }
