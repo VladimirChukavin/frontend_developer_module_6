@@ -17,7 +17,7 @@ const renderMap = () => {
     .setView({
       lat: 59.968322,
       lng: 30.317359
-    }, 17);
+    }, 18);
 
   L.tileLayer(
     'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
