@@ -7,11 +7,12 @@
   &__form {
     display: flex;
     flex-direction: column;
+    margin-bottom: 39px;
 
     @media (min-width: $tablet-width) {
       justify-content: space-between;
       flex-flow: row wrap;
-      margin-bottom: 41px;
+      margin-bottom: 43px;
     }
   }
 
@@ -44,104 +45,17 @@
 
   &__price-range {
     position: relative;
-    padding: 10px 0;
+    padding: 10px 0 10px 10px;
     margin-bottom: 24px;
+    margin-top: -1px;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 20px;
+      margin-left: -3px;
     }
 
     @media (min-width: $desktop-width) {
       margin-bottom: 22px;
-    }
-  }
-
-  &__scale {
-    height: 2px;
-    margin-left: 3px;
-    background-color: $light-grey;
-  }
-
-  &__bar {
-    width: 241px;
-    height: 4px;
-    margin-top: -3px;
-    margin-left: 3px;
-    background-color: $primary-lighter;
-
-    &--disabled {
-      background-color: $base-grey;
-    }
-
-    @media (min-width: $tablet-width) {
-      width: 192px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 274px;
-    }
-  }
-
-  &__control {
-    position: absolute;
-    top: -1px;
-    width: 24px;
-    height: 24px;
-    background-color: $base-white;
-    border-radius: 50%;
-    border: 2px solid $primary-lighter;
-    cursor: pointer;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background-color: $base-white;
-    }
-
-    &:hover::before {
-      background-color: $primary-opacity;
-    }
-
-    &:focus::before {
-      background-color: $primary-opacity;
-    }
-
-    &:active::before {
-      background-color: $base-primary;
-    }
-
-    &:focus {
-      outline: none;
-    }
-
-    &--disabled {
-      border-color: $base-grey;
-      cursor: auto;
-    }
-  }
-
-  &__control--min {
-    left: 3px;
-
-    @media (min-width: $tablet-width) {
-      left: 0;
-    }
-  }
-
-  &__control--max {
-    left: 239px;
-
-    @media (min-width: $tablet-width) {
-      left: 179px;
-    }
-
-    @media (min-width: $desktop-width) {
-      left: 274px;
     }
   }
 
@@ -163,6 +77,7 @@
 
     @media (min-width: $tablet-width) {
       width: 87px;
+      padding: 8px 6px 8px 21px;
     }
 
     &--min {
@@ -247,7 +162,6 @@
   }
 
   &__buttons {
-    margin-bottom: 37px;
     margin-left: 3px;
 
     @media (min-width: $tablet-width) {
@@ -317,6 +231,79 @@
       &--reset {
         width: 149px;
       }
+    }
+  }
+
+  // noUiSlider
+  .noUi-target {
+    background: $light-grey;
+    border-radius: 0;
+    border: none;
+    box-shadow: inset 0 0 1px 1px $lightest-grey, 0 0 1px 1px $lightest-grey;
+  }
+
+  .noUi-horizontal {
+    height: 4px;
+  }
+
+  .noUi-connect {
+    background: $primary-lighter;
+  }
+
+  .noUi-handle {
+    position: absolute;
+    top: -10px;
+    width: 24px;
+    height: 24px;
+    background: $base-white;
+    border-radius: 50%;
+    border: 2px solid $primary-lighter;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $base-white;
+    }
+
+    &:hover::before {
+      background-color: $primary-opacity;
+    }
+
+    &:focus::before {
+      background-color: $primary-opacity;
+    }
+
+    &:active::before {
+      background-color: $base-primary;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &--disabled {
+      border-color: $base-grey;
+      cursor: auto;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .noUi-handle-upper {
+    @media (min-width: $tablet-width) {
+      right: -7px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -19px;
     }
   }
 }
