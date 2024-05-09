@@ -139,3 +139,11 @@ input[type="radio"].visually-hidden {
 .toggle {
   display: none;
 }
+
+.main__error-message {
+  text-align: center;
+}
+
+.main__link:hover {
+  color: $primary-lighter;
+}
