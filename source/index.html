@@ -13,7 +13,7 @@
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-    <link rel="stylesheet" href="vendor/nouislider/nouislider.css">
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
@@ -154,37 +154,13 @@
             </div>
           </div>
         </div>
-        <div class="slider__arrows">
-          <button class="swiper-button-prev slider__arrow slider__arrow--prev" type="button">
-            <span class="visually-hidden">Назад</span>
-<!--            <svg width="11" height="20" aria-hidden="true" focusable="false" role="img">-->
-<!--              <use href="icons/stack.svg#arrow-left"></use>-->
-<!--            </svg>-->
-          </button>
-          <button class="swiper-button-next slider__arrow slider__arrow--next" type="button">
-            <span class="visually-hidden">Вперед</span>
-<!--            <svg width="11" height="20" aria-hidden="true" focusable="false" role="img">-->
-<!--              <use href="icons/stack.svg#arrow-right"></use>-->
-<!--            </svg>-->
-          </button>
-        </div>
-        <ol class="swiper-pagination slider__toggles toggles">
-          <li class="toggles__item">
-            <button class="toggles__btn toggles__btn--active" type="button">
-              <span class="visually-hidden">Слайд 1</span>
-            </button>
-          </li>
-          <li class="toggles__item">
-            <button class="toggles__btn" type="button">
-              <span class="visually-hidden">Слайд 2</span>
-            </button>
-          </li>
-          <li class="toggles__item">
-            <button class="toggles__btn" type="button">
-              <span class="visually-hidden">Слайд 3</span>
-            </button>
-          </li>
-        </ol>
+        <button class="swiper-button-prev slider__arrow slider__arrow--prev" type="button">
+          <span class="visually-hidden">Назад</span>
+        </button>
+        <button class="swiper-button-next slider__arrow slider__arrow--next" type="button">
+          <span class="visually-hidden">Вперед</span>
+        </button>
+        <div class="swiper-pagination slider__toggles toggles"></div>
       </section>
       <section class="features">
         <div class="container">
@@ -221,7 +197,7 @@
                   <legend>Цена</legend>
                   <div class="filter__price-range">
                     <span class="visually-hidden">Шкала диапазона цен с двумя ползунками</span>
-                    <div id="filter__slider"></div>
+                    <div id="filter-slider"></div>
                   </div>
                   <div class="filter__price-input">
                     <label class="visually-hidden" for="price-lower">Минимальная цена</label>
@@ -522,6 +498,6 @@
     </footer>
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script src="vendor/leaflet/leaflet.js"></script>
-    <script src="vendor/nouislider/nouislider.js"></script>
+    <script src="vendor/nouislider/nouislider.min.js"></script>
   </body>
 </html>
