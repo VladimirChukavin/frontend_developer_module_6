@@ -1,1 +1,1 @@
-var e=()=>new Swiper(".swiper",{slidesPerView:1,spaceBetween:30,loop:!0,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});export{e as headerSlider};
+var e=()=>new Swiper(".swiper",{slidesPerView:1,spaceBetween:10,loop:!0,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});export{e as headerSlider};
