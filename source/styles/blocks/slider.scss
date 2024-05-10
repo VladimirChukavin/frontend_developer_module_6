@@ -1,3 +1,4 @@
+// Slider block
 .slider {
   position: relative;
 
@@ -180,8 +181,8 @@
   &__button {
     display: inline-block;
     width: 113px;
-    height: 40px;
-    padding: 9px 20px 8px;
+    height: 39px;
+    padding: 1px 0 0;
     line-height: 24px;
 
     &:hover {
@@ -209,9 +210,10 @@
     height: 656px;
     padding: 0;
     color: $base-primary;
+    --swiper-navigation-size: 20px;
 
     &--prev {
-      margin: 1px 1px 1px -1px;
+      margin: 1px 1px 1px -10px;
 
       &:hover {
         background: linear-gradient(90deg, $base-white 0%, rgba(255 255 255 / 0) 100%);
@@ -256,40 +258,19 @@
 
     @media (min-width: $desktop-width) {
       height: 714px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-top: 2px;
+      margin-top: 0;
     }
   }
 }
 
-.toggles {
+// Swiper
+.slider .toggles {
   display: none;
 
-  @media (min-width: $desktop-width) {
-    display: flex;
-    position: absolute;
-    bottom: 70px;
-    right: 43%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  &__item {
-    margin-right: 8px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__btn {
-    display: block;
-    width: 62px;
-    height: 4px;
-    padding: 0;
+  & span {
+    --swiper-pagination-bullet-width: 62px;
+    --swiper-pagination-bullet-height: 4px;
+    border-radius: 0;
     background-color: $base-white;
 
     &:hover,
@@ -304,23 +285,33 @@
     &:active {
       background: $base-primary;
     }
+  }
 
-    &--active {
+  & .swiper-pagination-bullet-active {
+    background: $base-primary;
+
+    &:hover,
+    &:focus {
       background-color: $base-primary;
-
-      &:hover,
-      &:focus {
-        background-color: $base-primary;
-      }
-
-      &:focus {
-        pointer-events: none;
-      }
-
-      &:active {
-        background: $base-primary;
-        pointer-events: none;
-      }
     }
+
+    &:focus {
+      pointer-events: none;
+    }
+
+    &:active {
+      background: $base-primary;
+      pointer-events: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    position: absolute;
+    bottom: 70px;
+    left: 42.7%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 }
