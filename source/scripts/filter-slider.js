@@ -2,7 +2,7 @@
  * Функция для вывода на страницу в блоке каталога фильтра для выбора диапазона цен.
  */
 const filterSlider = () => {
-  const slider = document.querySelector('#filter__slider');
+  const slider = document.querySelector('#filter-slider');
   const minPrice = document.querySelector('#price-lower');
   const maxPrice = document.querySelector('#price-upper');
   const reset = document.querySelector('.filter__button--reset');
