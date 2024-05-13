@@ -1,309 +1,270 @@
 // Slider block
 .slider {
   position: relative;
+}
 
-  &__item {
-    padding-top: 20px;
-    padding-bottom: 51px;
-    text-align: center;
-
-    &--flat {
-      background-color: $flat-white;
-    }
-
-    &--lavender {
-      background-color: $lavender-latte;
-    }
-
-    &--espresso {
-      background-color: $espresso;
-    }
-  }
+.slider__item {
+  padding-top: 20px;
+  padding-bottom: 55px;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
-    &__item {
-      padding-top: 55px;
-      padding-bottom: 0;
-    }
-
-    &__item--flat {
-      background-image: linear-gradient(to bottom, $flat-white 640px, $base-white 188px);
-    }
-
-    &__item--lavender {
-      background-image: linear-gradient(to bottom, $lavender-latte 640px, $base-white 188px);
-    }
-
-    &__item--espresso {
-      background-image: linear-gradient(to bottom, $espresso 640px, $base-white 188px);
-    }
+    padding-top: 55px;
+    padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
-    &__item {
-      padding-top: 33px;
-      padding-bottom: 79px;
-      text-align: left;
+    padding-top: 33px;
+    padding-bottom: 79px;
+    text-align: left;
+  }
+
+  &--flat {
+    background-color: $flat-white;
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(to bottom, $flat-white 640px, $base-white 188px);
     }
 
-    &__item--flat {
+    @media (min-width: $desktop-width) {
       background: $flat-white;
     }
+  }
 
-    &__item--lavender {
-      background: $lavender-latte;
+  &--lavender {
+    background-color: $lavender-latte;
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(to bottom, $lavender-latte 640px, $base-white 188px);
     }
 
-    &__item--espresso {
+    @media (min-width: $desktop-width) {
+      background: $lavender-latte;
+    }
+  }
+
+  &--espresso {
+    background-color: $espresso;
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(to bottom, $espresso 640px, $base-white 188px);
+    }
+
+    @media (min-width: $desktop-width) {
       background: $espresso;
     }
   }
+}
 
-  &__container {
-    @media (min-width: $tablet-width) {
-      display: flex;
-      flex-direction: column;
-    }
-
-    @media (min-width: $desktop-width) {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-
-  &__image {
-    margin-bottom: -2px;
-
-    @media (min-width: $tablet-width) {
-      margin-top: -3px;
-    }
-
-    @media (min-width: $desktop-width) {
-      max-width: 600px;
-      max-height: 600px;
-      margin-left: 85px;
-    }
-  }
-
-  &__info {
-    height: 300px;
-
-    @media (min-width: $tablet-width) {
-      order: -1;
-    }
-
-    @media (min-width: $desktop-width) {
-      max-width: 625px;
-      order: 0;
-      margin-top: -18px;
-      margin-right: 85px;
-      margin-left: 30px;
-    }
-  }
-
-  &__heading {
-    margin: 1px 0 10px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 48px;
-    letter-spacing: 0.02em;
-
-    @media (min-width: $tablet-width) {
-      margin-bottom: 16px;
-      margin-left: 1px;
-      font-size: 56px;
-      line-height: 80px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-left: 0;
-    }
-  }
-
-  &__description {
-    margin: 0 0 20px;
-    font-size: 14px;
-    line-height: 20px;
-
-    @media (min-width: $tablet-width) {
-      padding-left: 69px;
-      padding-right: 69px;
-      font-size: 20px;
-      line-height: 160%;
-    }
-
-    @media (min-width: $desktop-width) {
-      padding-left: 0;
-      padding-right: 0;
-      margin-bottom: 40px;
-    }
-  }
-
-  &__description br {
-    display: none;
-
-    @media (min-width: $tablet-width) {
-      display: block;
-    }
-  }
-
-  &__wrapper {
+.slider__container {
+  @media (min-width: $tablet-width) {
     display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding-left: 25px;
+  }
+}
 
-    @media (min-width: $tablet-width) {
-      justify-content: center;
-      padding-left: 0;
-    }
+.slider__image {
+  margin-bottom: -2px;
 
-    @media (min-width: $desktop-width) {
-      justify-content: start;
-    }
+  @media (min-width: $tablet-width) {
+    margin-top: -3px;
   }
 
-  &__old-price {
-    margin-top: 2px;
-    margin-right: 9px;
-    line-height: 32px;
-    color: $base-primary;
+  @media (min-width: $desktop-width) {
+    max-width: 600px;
+    max-height: 600px;
+    margin-left: 85px;
+  }
+}
+
+.slider__info {
+  @media (min-width: $tablet-width) {
+    order: -1;
   }
 
-  &__price {
-    margin-right: 21px;
-    font-weight: 600;
+  @media (min-width: $desktop-width) {
+    max-width: 625px;
+    order: 0;
+    margin-top: -18px;
+    margin-right: 85px;
+    margin-left: 30px;
+  }
+}
+
+.slider__heading {
+  margin: 1px 0 10px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 16px;
+    margin-left: 1px;
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
+}
+
+.slider__description {
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 69px;
+    padding-right: 69px;
     font-size: 20px;
-    line-height: 32px;
-    color: $base-black;
+    line-height: 160%;
   }
 
-  &__button {
-    display: inline-block;
-    width: 113px;
-    height: 39px;
-    padding: 1px 0 0;
-    line-height: 24px;
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.slider__description br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.slider__wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 25px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+  }
+}
+
+.slider__old-price {
+  margin-top: 2px;
+  margin-right: 9px;
+  margin-bottom: 5px;
+  line-height: 32px;
+  color: $base-primary;
+}
+
+.slider__price {
+  margin-right: 21px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: $base-black;
+}
+
+.slider__button {
+  display: inline-block;
+  width: 113px;
+  min-height: 39px;
+  padding: 1px 0 0;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  line-height: 24px;
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:focus {
+    background-color: $primary-lighter;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+  }
+}
+
+.slider__arrow {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  padding: 0;
+  color: $base-primary;
+  --swiper-navigation-size: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 640px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 714px;
+    margin-top: 0;
+  }
+
+  &--prev {
+    margin: 0 1px 1px -10px;
 
     &:hover {
-      background-color: $primary-lighter;
+      background: linear-gradient(90deg, $base-white 0%, $white-transparent 100%);
     }
 
     &:focus {
-      background-color: $primary-lighter;
+      background: linear-gradient(90deg, $base-white 0%, $white-transparent 100%);
       outline: none;
     }
 
     &:active {
-      background-color: $primary-darker;
-    }
-
-    &:disabled {
-      background-color: $base-grey;
+      background: linear-gradient(90deg, $primary-opacity 0%, $primary-transparent 100%);
     }
   }
 
-  &__arrow {
-    position: absolute;
-    top: 0;
-    width: 20px;
-    height: 656px;
-    padding: 0;
-    color: $base-primary;
-    --swiper-navigation-size: 20px;
+  &--next {
+    right: 0;
+    margin-top: 0;
 
-    &--prev {
-      margin: 1px 1px 1px -10px;
-
-      &:hover {
-        background: linear-gradient(90deg, $base-white 0%, rgba(255 255 255 / 0) 100%);
-      }
-
-      &:focus {
-        background: linear-gradient(90deg, $base-white 0%, rgba(255 255 255 / 0) 100%);
-        outline: none;
-      }
-
-      &:active {
-        background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
-      }
+    &:hover {
+      background: linear-gradient(270deg, $base-white 0%, $white-transparent 100%);
     }
 
-    &--next {
-      right: 0;
-      margin-top: 1px;
-
-      &:hover {
-        background: linear-gradient(270deg, $base-white 0%, rgba(255 255 255 / 0) 100%);
-      }
-
-      &:focus {
-        background: linear-gradient(270deg, $base-white 0%, rgba(255 255 255 / 0) 100%);
-        outline: none;
-      }
-
-      &:active {
-        background: linear-gradient(270deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
-      }
+    &:focus {
+      background: linear-gradient(270deg, $base-white 0%, $white-transparent 100%);
+      outline: none;
     }
 
-    &:disabled {
-      color: $base-grey;
+    &:active {
+      background: linear-gradient(270deg, $primary-opacity 0%, $primary-transparent 100%);
     }
+  }
 
-    @media (min-width: $tablet-width) {
-      width: 80px;
-      height: 640px;
-    }
-
-    @media (min-width: $desktop-width) {
-      height: 714px;
-      margin-top: 0;
-    }
+  &:disabled {
+    color: $base-grey;
   }
 }
 
 // Swiper
 .slider .toggles {
   display: none;
-
-  & span {
-    --swiper-pagination-bullet-width: 62px;
-    --swiper-pagination-bullet-height: 4px;
-    border-radius: 0;
-    background-color: $base-white;
-
-    &:hover,
-    &:focus {
-      background: $primary-opacity;
-    }
-
-    &:focus {
-      outline: none;
-    }
-
-    &:active {
-      background: $base-primary;
-    }
-  }
-
-  & .swiper-pagination-bullet-active {
-    background: $base-primary;
-
-    &:hover,
-    &:focus {
-      background-color: $base-primary;
-    }
-
-    &:focus {
-      pointer-events: none;
-    }
-
-    &:active {
-      background: $base-primary;
-      pointer-events: none;
-    }
-  }
 
   @media (min-width: $desktop-width) {
     display: flex;
@@ -313,5 +274,43 @@
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+}
+
+.toggles span {
+  --swiper-pagination-bullet-width: 62px;
+  --swiper-pagination-bullet-height: 4px;
+  border-radius: 0;
+  background-color: $base-white;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-opacity;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background-color: $base-primary;
+  }
+}
+
+.toggles .swiper-pagination-bullet-active {
+  background-color: $base-primary;
+
+  &:hover,
+  &:focus {
+    background-color: $base-primary;
+  }
+
+  &:focus {
+    pointer-events: none;
+  }
+
+  &:active {
+    background-color: $base-primary;
+    pointer-events: none;
   }
 }
