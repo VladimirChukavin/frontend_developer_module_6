@@ -10,12 +10,21 @@
     <link rel="icon" type="image/png" href="favicons/512.png" sizes="512x512">
     <link rel="icon" type="image/svg+xml" href="favicons/icon.svg">
     <link rel="icon" href="favicon.ico">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-ExtraBold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
     <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
     <header class="header header--nojs">
@@ -192,7 +201,7 @@
           <h2 class="catalog__heading heading">Каталог кофейных напитков</h2>
           <div class="catalog__wrapper">
             <div class="catalog__filter filter">
-              <form id="catalog-form" class="filter__form" action="https://echo.htmlacademy.ru" method="get">
+              <form class="filter__form" id="catalog-form" action="https://echo.htmlacademy.ru" method="get">
                 <fieldset class="filter__price">
                   <legend>Цена</legend>
                   <div class="filter__price-range">
@@ -261,13 +270,13 @@
             </div>
             <div class="catalog__products products">
               <div class="catalog__sort sort">
-                <span>Сортировка:</span>
-                <select class="sort__select" name="sort" form="catalog-form">
-                  <option value="default">по умолчанию</option>
-                  <option value="expensive">сначала дорогие</option>
-                  <option value="cheap">сначала дешёвые</option>
-                  <option value="rating">высокий рейтинг</option>
-                </select>
+                <label for="sort-select">Сортировка:</label>
+                  <select class="sort__select" id="sort-select" name="sort" form="catalog-form">
+                    <option value="default">по умолчанию</option>
+                    <option value="expensive">сначала дорогие</option>
+                    <option value="cheap">сначала дешёвые</option>
+                    <option value="rating">высокий рейтинг</option>
+                  </select>
                 <div class="sort__icon"></div>
               </div>
               <ul class="products__list">
@@ -499,5 +508,6 @@
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script src="vendor/leaflet/leaflet.js"></script>
     <script src="vendor/nouislider/nouislider.min.js"></script>
+    <script src="scripts/index.js" defer></script>
   </body>
 </html>
