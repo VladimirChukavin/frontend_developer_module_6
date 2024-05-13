@@ -16,49 +16,54 @@
     margin-top: 2px;
     margin-bottom: 27px;
   }
+}
 
-  &__select {
-    width: 165px;
-    padding: 5px 10px;
-    margin-left: 9px;
-    font-weight: 600;
-    border-radius: 4px;
-    border: none;
-    color: $base-primary;
-    cursor: pointer;
-    appearance: none;
+.sort label {
+  font-weight: 600;
+  line-height: 24px;
+}
 
-    &:hover {
-      background-color: $base-secondary;
-    }
+.sort__select {
+  width: 165px;
+  padding: 5px 10px;
+  margin-left: 9px;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
+  color: $base-primary;
+  cursor: pointer;
+  appearance: none;
 
-    &:focus {
-      outline: none;
-      background-color: $base-secondary;
-    }
-
-    @media (min-width: $tablet-width) {
-      margin-left: 11px;
-    }
+  &:hover {
+    background-color: $base-secondary;
   }
 
-  &__select option {
-    cursor: pointer;
+  &:focus {
+    outline: none;
+    background-color: $base-secondary;
   }
 
-  &__icon {
-    position: relative;
+  @media (min-width: $tablet-width) {
+    margin-left: 11px;
+  }
+}
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: -5px;
-      left: -20px;
-      width: 10px;
-      height: 10px;
-      background: url("../../icons/icon-down.svg") no-repeat;
-      cursor: pointer;
-    }
+.sort__select option {
+  cursor: pointer;
+}
+
+.sort__icon {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -20px;
+    width: 10px;
+    height: 10px;
+    background-image: url("../../icons/icon-down.svg");
+    cursor: pointer;
   }
 }
 
