@@ -13,71 +13,71 @@
   @media (min-width: $desktop-width) {
     margin-right: -1px;
   }
+}
 
-  &__item:first-child {
-    margin-right: auto;
+.pagination__item:first-child {
+  margin-right: auto;
 
-    @media (min-width: $tablet-width) {
-      margin-right: 17px;
-      margin-top: 1px;
-    }
+  @media (min-width: $tablet-width) {
+    margin-right: 17px;
+    margin-top: 1px;
+  }
+}
+
+.pagination__item:last-child {
+  margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 20px;
+    margin-top: 1px;
+  }
+}
+
+.pagination__item:last-child .pagination__link {
+  padding-right: 14px;
+  padding-left: 18px;
+}
+
+.pagination__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 8px 16px;
+  margin-top: -2px;
+  color: $base-primary;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+    color: $base-white;
   }
 
-  &__item:last-child {
-    margin-left: auto;
-
-    @media (min-width: $tablet-width) {
-      margin-left: 20px;
-      margin-top: 1px;
-    }
+  &:focus {
+    outline: none;
   }
 
-  &__item:last-child &__link {
-    padding-right: 14px;
-    padding-left: 18px;
+  &:active {
+    background-color: $primary-darker;
   }
 
-  &__link {
+  @media (min-width: $tablet-width) {
+    width: auto;
+    padding: 8px 20px;
+  }
+}
+
+.pagination__link span {
+  display: none;
+
+  @media (min-width: $tablet-width) {
     display: block;
-    width: 40px;
-    height: 40px;
-    padding: 8px 16px;
-    margin-top: -2px;
-    color: $base-primary;
-    border-radius: 4px;
-
-    &:hover,
-    &:focus {
-      background-color: $primary-lighter;
-      color: $base-white;
-    }
-
-    &:focus {
-      outline: none;
-    }
-
-    &:active {
-      background-color: $primary-darker;
-    }
-
-    @media (min-width: $tablet-width) {
-      width: auto;
-      padding: 8px 20px;
-    }
   }
+}
 
-  &__link span {
+.pagination__link svg {
+  @media (min-width: $tablet-width) {
     display: none;
-
-    @media (min-width: $tablet-width) {
-      display: block;
-    }
-  }
-
-  &__link svg {
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
   }
 }
 
@@ -88,44 +88,44 @@
   padding: 0;
   margin: 0 4px 0 3px;
   list-style: none;
+}
 
-  &__link {
-    display: block;
-    width: 40px;
-    height: 40px;
-    padding: 8px 16px;
-    line-height: 150%;
-    color: $base-primary;
-    text-align: center;
-    border-radius: 4px;
+.numbers-page__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 8px 16px;
+  line-height: 150%;
+  color: $base-primary;
+  text-align: center;
+  border-radius: 4px;
 
-    &:hover,
-    &:focus {
-      background-color: $primary-lighter;
-      color: $base-white;
-    }
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+    color: $base-white;
+  }
 
-    &:focus {
-      outline: none;
-    }
+  &:focus {
+    outline: none;
+  }
 
-    &:active {
-      background-color: $primary-darker;
-    }
+  &:active {
+    background-color: $primary-darker;
+  }
 
-    &--current {
-      font-weight: 600;
+  &--current {
+    font-weight: 600;
+    color: $base-black;
+    cursor: auto;
+
+    &:hover {
+      background-color: $base-white;
       color: $base-black;
-      cursor: auto;
+    }
 
-      &:hover {
-        background-color: $base-white;
-        color: $base-black;
-      }
-
-      &:focus {
-        pointer-events: none;
-      }
+    &:focus {
+      pointer-events: none;
     }
   }
 }
