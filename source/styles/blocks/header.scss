@@ -1,41 +1,43 @@
 // Header block
-.header {
-  &__logo-wrapper {
-    display: flex;
+.header__logo-wrapper {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.header__logo {
+  display: block;
+  width: 33px;
+  height: 36px;
+
+  @media (min-width: $tablet-width) {
+    width: 82px;
   }
 
-  &__logo {
+  @media (min-width: $desktop-width) {
+    width: 171px;
+    margin-top: 0;
+    margin-right: 20px;
+  }
+}
+
+.header__description {
+  display: none;
+
+  @media (min-width: $desktop-width) {
     display: block;
-    width: 33px;
-    height: 36px;
-
-    @media (min-width: $tablet-width) {
-      width: 82px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 171px;
-      margin-top: 0;
-      margin-right: 20px;
-    }
+    margin: 2px 0 0;
+    font-size: 12px;
+    line-height: 16px;
   }
+}
 
-  &__description {
-    display: none;
-
-    @media (min-width: $desktop-width) {
-      display: block;
-      margin: 2px 0 0;
-      font-size: 12px;
-      line-height: 16px;
-    }
-  }
-
-  &--nojs .nav__menu-button {
+.header--nojs {
+  .nav__menu-button {
     visibility: hidden;
   }
 
-  &--nojs .toggle {
+  .toggle {
     display: block;
   }
 }
@@ -50,171 +52,170 @@
     padding-left: 19px;
     padding-right: 20px;
   }
+}
 
-  &__list {
-    width: 100%;
-    order: 1;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-
-    @media (min-width: $tablet-width) {
-      &.toggle {
-        display: flex;
-        order: 0;
-        width: auto;
-        margin-left: 6px;
-      }
-    }
-
-    @media (min-width: $desktop-width) {
-      &.toggle {
-        margin-left: 22px;
-      }
-    }
+.nav .toggle {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    order: 0;
+    width: auto;
+    margin-left: 6px;
   }
 
-  &__item {
-    margin-left: -20px;
-    margin-right: -20px;
-    border-top: 1px solid $base-secondary;
+  @media (min-width: $desktop-width) {
+    margin-left: 22px;
+  }
+}
 
-    &:last-child {
-      border-bottom: none;
+.nav__list {
+  width: 100%;
+  order: 1;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
 
-      @media (min-width: $desktop-width) {
-        margin-right: 0;
-      }
-    }
+.nav__item {
+  margin-left: -20px;
+  margin-right: -20px;
+  border-top: 1px solid $base-secondary;
 
-    @media (min-width: $tablet-width) {
-      margin-left: 0;
+  &:last-child {
+    border-bottom: none;
+
+    @media (min-width: $desktop-width) {
       margin-right: 0;
-      border-top: none;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-right: 20px;
     }
   }
 
-  &__link {
-    display: block;
-    padding: 20px;
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    margin-right: 0;
+    border-top: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 20px;
+  }
+}
+
+.nav__link {
+  display: block;
+  padding: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 20px 30px;
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    color: $base-black;
+    border-bottom: 2px solid $base-white;
+  }
 
-    &:hover,
-    &:focus {
-      color: $base-primary;
-    }
+  &:hover,
+  &:focus {
+    color: $base-primary;
+  }
 
-    &:focus {
-      outline: none;
-    }
+  &:focus {
+    outline: none;
+  }
 
-    &:active {
-      background-color: $base-secondary;
-
-      @media (min-width: $tablet-width) {
-        border-bottom-color: $base-secondary;
-      }
-    }
+  &:active {
+    background-color: $base-secondary;
 
     @media (min-width: $tablet-width) {
-      padding: 32px 20px 30px;
+      border-bottom-color: $base-secondary;
+    }
+  }
+
+  &--current {
+    color: $base-primary;
+    border-bottom-color: $base-primary;
+  }
+
+  &--current:hover,
+  &--current:focus {
+    pointer-events: none;
+    color: $base-primary;
+    background-color: $base-white;
+  }
+
+  &--current:active {
+    background-color: $base-white;
+    color: $base-primary;
+    border-bottom-color: $base-primary;
+    pointer-events: none;
+  }
+}
+
+.nav__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  & span {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    & span {
+      display: inline;
+      margin-left: 8px;
       font-weight: 500;
       font-size: 12px;
       line-height: 16px;
       letter-spacing: 0.02em;
       text-transform: uppercase;
-      color: $base-black;
-      border-bottom: 2px solid $base-white;
-    }
-
-    &--current {
-      color: $base-primary;
-      border-bottom-color: $base-primary;
-    }
-
-    &--current:hover,
-    &--current:focus {
-      pointer-events: none;
-      color: $base-primary;
-      background-color: $base-white;
-    }
-
-    &--current:active {
-      background-color: $base-white;
-      color: $base-primary;
-      border-bottom-color: $base-primary;
-      pointer-events: none;
     }
   }
+}
 
-  &__wrapper {
+.nav__login,
+.nav__cart,
+.nav__menu-button {
+  padding: 21px 22px 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 31px 22px 25px;
+  }
+
+  @media (min-width: $desktop-width) {
     display: flex;
-
-    & span {
-      display: none;
-    }
-
-    @media (min-width: $desktop-width) {
-      & span {
-        display: inline;
-        margin-left: 8px;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 16px;
-        letter-spacing: 0.02em;
-        text-transform: uppercase;
-      }
-    }
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-right: 20px;
+    margin-left: 19px;
   }
 
-  &__login,
-  &__cart,
-  &__menu-button {
-    padding: 21px 22px 15px;
-
-    &:hover {
-      color: $base-primary;
-    }
-
-    &:focus {
-      color: $base-primary;
-      outline: none;
-    }
-
-    &:active {
-      background-color: $base-secondary;
-    }
-
-    @media (min-width: $tablet-width) {
-      padding: 31px 22px 25px;
-    }
-
-    @media (min-width: $desktop-width) {
-      display: flex;
-      padding-top: 32px;
-      padding-bottom: 32px;
-      padding-right: 20px;
-      margin-left: 19px;
-    }
+  &:hover {
+    color: $base-primary;
   }
 
-  &__menu-button {
-    display: block;
-    width: 60px;
-    padding-top: 18px;
-    margin-right: -20px;
+  &:focus {
+    color: $base-primary;
+    outline: none;
+  }
 
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
+  &:active {
+    background-color: $base-secondary;
+  }
+}
+
+.nav__menu-button {
+  display: block;
+  width: 60px;
+  padding-top: 18px;
+  margin-right: -20px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
