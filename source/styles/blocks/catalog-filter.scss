@@ -83,25 +83,23 @@
 
   &--min {
     margin-left: 3px;
-  }
 
-  @media (min-width: $tablet-width) {
-    &--min {
+    @media (min-width: $tablet-width) {
       margin-left: 0;
     }
   }
 
+
   &--max {
     margin-right: -3px;
     color: $base-black;
-  }
 
-  @media (min-width: $tablet-width) {
-    &--max {
+    @media (min-width: $tablet-width) {
       width: 88px;
       margin-right: 0;
     }
   }
+
 
   @media (min-width: $desktop-width) {
     &--min,
@@ -168,7 +166,6 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    width: 277px;
     margin: 10px auto 0;
   }
 
@@ -181,13 +178,12 @@
 .filter__button {
   display: block;
   width: 280px;
-  height: 40px;
-  padding: 9px 20px 8px;
+  padding: 9px 20px 7px;
   line-height: 24px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    width: 137px;
+    width: auto;
   }
 
   @media (min-width: $desktop-width) {
@@ -196,13 +192,14 @@
 
   &--submit {
     margin-bottom: 20px;
-  }
 
-  @media (min-width: $tablet-width) {
-    &--submit {
+    @media (min-width: $tablet-width) {
       margin-bottom: 0;
+      margin-right: 20px;
+      padding-right: 21px;
     }
   }
+
 
   &--reset {
     background-color: $base-white;
@@ -220,16 +217,8 @@
       background-color: $light-grey;
       color: $base-white;
     }
-  }
 
-  @media (min-width: $tablet-width) {
-    &--reset {
-      width: 120px;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    &--reset {
+    @media (min-width: $desktop-width) {
       width: 149px;
     }
   }
@@ -237,7 +226,7 @@
 
 // noUiSlider
 .noUi-target {
-  background: $light-grey;
+  background-color: $light-grey;
   border-radius: 0;
   border: none;
   box-shadow: inset 0 0 1px 1px $lightest-grey, 0 0 1px 1px $lightest-grey;
@@ -248,7 +237,7 @@
 }
 
 .noUi-connect {
-  background: $primary-lighter;
+  background-color: $primary-lighter;
 }
 
 .filter .noUi-handle {
@@ -256,7 +245,7 @@
   top: -10px;
   width: 24px;
   height: 24px;
-  background: $base-white;
+  background-color: $base-white;
   border-radius: 50%;
   border: 2px solid $primary-lighter;
   cursor: pointer;
