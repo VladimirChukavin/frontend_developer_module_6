@@ -80,12 +80,15 @@
 
 .product__image {
   display: block;
+  width: 130px;
+  height: 188px;
   margin: 0 auto;
 }
 
 .product__heading {
   margin: 0 0 4px;
   padding-left: 20px;
+  padding-right: 20px;
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
@@ -113,6 +116,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding-left: 3px;
   padding-right: 5px;
 
