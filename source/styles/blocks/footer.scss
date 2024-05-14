@@ -90,6 +90,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
@@ -207,19 +208,23 @@
 
 .footer__developer {
   display: flex;
-  width: 207px;
-  margin: 20px auto 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0 30px;
   font-size: 12px;
   line-height: 16px;
   color: $base-grey;
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    width: auto;
     margin-top: 10px;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 25px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -249,7 +254,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 160px;
+  min-width: 160px;
 }
 
 .social__link {
