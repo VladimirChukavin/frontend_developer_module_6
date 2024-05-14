@@ -58,6 +58,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     order: 0;
+    flex-wrap: wrap;
     width: auto;
     margin-left: 6px;
   }
@@ -160,21 +161,25 @@
 .nav__wrapper {
   display: flex;
   flex-wrap: wrap;
+}
 
-  & span {
+.nav__wrapper span:first-child {
+  @media (min-width: $desktop-width) {
     display: none;
   }
+}
+
+.nav__wrapper span:last-child {
+  display: none;
 
   @media (min-width: $desktop-width) {
-    & span {
-      display: inline;
-      margin-left: 8px;
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 16px;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-    }
+    display: inline;
+    margin-left: 8px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
   }
 }
 
