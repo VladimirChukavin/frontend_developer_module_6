@@ -13,7 +13,7 @@
   left: -52px;
   width: 42px;
   border-radius: 12px;
-  background: $base-grey;
+  background-color: $base-grey;
 }
 
 .country-list__item label::after {
@@ -28,7 +28,7 @@
 .country-list__item input:not(:disabled):not(:checked) + label:hover::before,
 .country-list__item input:not(:disabled):not(:checked):focus + label::before {
   border: 2px solid $primary-lighter;
-  background: $primary-opacity;
+  background-color: $primary-opacity;
 }
 
 .country-list__item input:checked + label::before {
