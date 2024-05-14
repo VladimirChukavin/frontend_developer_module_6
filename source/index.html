@@ -27,8 +27,11 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body class="page__body">
+
+    <!-- Header -->
     <header class="header header--nojs">
       <div class="container">
+        <!-- Site navigation -->
         <nav class="header__nav nav">
           <a class="header__logo-wrapper">
             <picture>
@@ -38,6 +41,7 @@
             </picture>
             <span class="header__description">Интернет-магазин <br> кофейных напитков</span>
           </a>
+          <!-- Mobile menu Открывается удалением класса toggle, закрывается добавлением класса toggle -->
           <ul class="nav__list toggle">
             <li class="nav__item">
               <a class="nav__link nav__link--current">Главная</a>
@@ -54,19 +58,21 @@
           </ul>
           <div class="nav__wrapper">
             <a class="nav__login" href="#">
+              <span class="visually-hidden">Войти в личный кабинет.</span>
               <svg width="16" height="16" aria-hidden="true" focusable="false" role="img">
                 <use href="icons/stack.svg#icon-login"></use>
               </svg>
               <span>Войти</span>
             </a>
             <a class="nav__cart" href="#">
+              <span class="visually-hidden">Перейти в корзину.</span>
               <svg width="16" height="16" aria-hidden="true" focusable="false" role="img">
                 <use href="icons/stack.svg#icon-cart"></use>
               </svg>
               <span>Корзина</span>
             </a>
             <button class="nav__menu-button nav__menu-button--open" type="button">
-              <span class="visually-hidden">Открыть меню</span>
+              <span class="visually-hidden">Открыть меню.</span>
               <svg width="16" height="12" aria-hidden="true" focusable="false" role="img">
                 <use href="icons/stack.svg#icon-open-menu"></use>
               </svg>
@@ -78,8 +84,11 @@
         </nav>
       </div>
     </header>
+
     <main class="main main-container">
       <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go</h1>
+
+      <!-- Slider -->
       <section class="slider swiper">
         <h2 class="visually-hidden">Слайдер товаров</h2>
         <div class="swiper-wrapper">
@@ -164,13 +173,15 @@
           </div>
         </div>
         <button class="swiper-button-prev slider__arrow slider__arrow--prev" type="button">
-          <span class="visually-hidden">Назад</span>
+          <span class="visually-hidden">Предыдущий слайд.</span>
         </button>
         <button class="swiper-button-next slider__arrow slider__arrow--next" type="button">
-          <span class="visually-hidden">Вперед</span>
+          <span class="visually-hidden">Следующий слайд.</span>
         </button>
         <div class="swiper-pagination slider__toggles toggles"></div>
       </section>
+
+      <!-- Features -->
       <section class="features">
         <div class="container">
           <span class="features__badge badge">Преимущества</span>
@@ -195,11 +206,15 @@
           </ul>
         </div>
       </section>
+
+      <!-- Catalog -->
       <section class="catalog">
         <div class="container">
           <span class="catalog__badge badge">Каталог</span>
           <h2 class="catalog__heading heading">Каталог кофейных напитков</h2>
           <div class="catalog__wrapper">
+
+            <!-- Filters -->
             <div class="catalog__filter filter">
               <form class="filter__form" id="catalog-form" action="https://echo.htmlacademy.ru" method="get">
                 <fieldset class="filter__price">
@@ -209,10 +224,10 @@
                     <div id="filter-slider"></div>
                   </div>
                   <div class="filter__price-input">
-                    <label class="visually-hidden" for="price-lower">Минимальная цена</label>
+                    <label class="visually-hidden" for="price-lower">Ввести минимальную цену.</label>
                     <input class="filter__input filter__input--min" type="number" id="price-lower" name="price_lower" min="0" placeholder="0">
                     <span class="filter__separator"></span>
-                    <label class="visually-hidden" for="price-upper">Максимальная цена</label>
+                    <label class="visually-hidden" for="price-upper">Ввести максимальную цену.</label>
                     <input class="filter__input filter__input--max" type="number" id="price-upper" name="price_upper" min="0" value="900" placeholder="0">
                   </div>
                 </fieldset>
@@ -268,6 +283,8 @@
                 </div>
               </form>
             </div>
+
+            <!-- Product list -->
             <div class="catalog__products products">
               <div class="catalog__sort sort">
                 <label for="sort-select">Сортировка:</label>
@@ -379,7 +396,7 @@
               </ul>
               <ul class="catalog__pagination pagination">
                 <li class="pagination__item">
-                  <a class="pagination__link pagination__link--prev" href="#">
+                  <a class="pagination__link pagination__link--prev" href="#" aria-label="Предыдущая страница.">
                     <svg width="6" height="10" aria-hidden="true" focusable="false" role="img">
                       <use href="icons/stack.svg#arrow-left-small"></use>
                     </svg>
@@ -400,7 +417,7 @@
                   </ul>
                 </li>
                 <li class="pagination__item">
-                  <a class="pagination__link pagination__link--next" href="#">
+                  <a class="pagination__link pagination__link--next" href="#" aria-label="Следующая страница.">
                     <svg width="6" height="10" aria-hidden="true" focusable="false" role="img">
                       <use href="icons/stack.svg#arrow-right-small"></use>
                     </svg>
@@ -409,15 +426,20 @@
                 </li>
               </ul>
             </div>
+
           </div>
         </div>
       </section>
+
+      <!-- Map -->
       <section class="map">
         <h2 class="visually-hidden">Карта с адресом магазина</h2>
         <div class="map__mask"></div>
         <div class="map__wrapper" id="map"></div>
       </section>
     </main>
+
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer__container container">
         <div class="footer__top">
@@ -505,6 +527,7 @@
         </div>
       </div>
     </footer>
+
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script src="vendor/leaflet/leaflet.js"></script>
     <script src="vendor/nouislider/nouislider.min.js"></script>
