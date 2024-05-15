@@ -2,6 +2,8 @@
 
 ### HTML Academy, Профессия «Фронтенд-разработчик #2»
 
+Ссылка на курс: https://htmlacademy.ru/profession/frontender
+
 ### Модуль 6. Производство
 
 Сборка работает на gulp 4 версии
