@@ -10,7 +10,8 @@
   },
   "globals": {
     "noUiSlider": "readonly",
-    "Pristine": "readonly"
+    "Swiper": "readonly",
+    "L": "readonly"
   },
   "extends": "htmlacademy/vanilla"
 }
